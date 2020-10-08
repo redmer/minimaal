@@ -1,0 +1,54 @@
+{%- assign p = include.post -%}
+
+{%- if p.link -%}
+    {%- assign title_tag_a = true -%}
+    {%- assign title_link = p.link -%}
+    {%- assign title_suffix = '→' -%}
+{%- else -%}
+    {%- if p.url == page.url -%}
+        {%- assign title_tag_a = false -%}
+    {%- else -%}
+        {%- assign title_tag_a = true -%}
+        {%- assign title_link = p.url -%}
+    {%- endif -%}
+{%- endif -%}
+
+{%- assign date_format = site.minimaal.date_format | default: "%A, %d %B %Y" -%}
+<article class='mv6
+                nested-links nested-copy-line-height'>
+    <!-- heading -->
+    <header>
+        <h1 class='f4 brand-dark-color lh-title'>
+
+            {%- if title_tag_a -%}
+                <a class='link underline-hover' href='{{ title_link | relative_url }}'>
+            {%- endif -%}
+
+                {{ p.title | escape }} {{ title_suffix }}
+            
+            {%- if title_tag_a -%}
+                </a>
+            {%- endif -%}
+
+        </h1>
+        <div class="gray f6">
+            <time datetime={{ p.date | date_to_xmlschema }}>{{ p.date | date: date_format }}</time>
+            {%- if p.author -%}
+                . Door: 
+            {% endif %}
+        {%- for a in p.author -%}
+            <span>{{ a }}</span>
+            {%- unless forloop.last -%}, {% endunless %}
+            {%- if forloop.last -%}. {% endif %}
+        {%- endfor -%}
+        </div>
+    </header>
+    <main>
+        <!-- contents -->
+        {{ p.content }}
+    </main>
+    <footer>
+        <!-- permalink -->
+        <a class='gray' href='{{ p.url | relative_url }}'># Permalink</a>
+    </footer>
+</article>

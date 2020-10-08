@@ -1,37 +1,50 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="{{ 'feed.xml' | relative_url }}">
-            <svg class="svg-icon orange">
-              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
-          </a>
-        </p>
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
-      </div>
-      <div class="footer-col">
-        <p>{{ site.description | escape }}</p>
-      </div>
-    </div>
-
-    <div class="social-links">
-      {%- include social.html -%}
-    </div>
-
+<footer class='w-100
+               sans-serif
+               nested-list-reset
+               bg-white 
+               bt b--black-10'
+        style='bottom:0;
+              '>
+<div class='ph2 ph0-l pt4 pb2
+            center mw7
+            '>
+<!-- l: max breedte -->
+  <img class='rdmr-logo'
+    alt="Rdmr.eu"
+    src='/assets/logo/logo-shaded-white.svg'>
+<div class='brand-dark-color
+            flex flex-column flex-row-l justify-between
+            '>
+<!-- l: max breedt, twee delen: p,ul -->
+    <p class='condensed f5 lh-title measure mr4-l'>{{ site.description }}</p>
+    <!-- Two menu item lists -->
+    <ul class='list lh-title ma0 mt3-l'>
+    {%- for link in site.data.menu.footer.links1 -%}
+    <li class='f4 mb3'><a class='color-inherit link underline-hover' href='{{ link.url }}'>{{ link.label }}</a>
+    {%- endfor -%}
+    </ul>
+    <ul class='list lh-title ma0 mt3-l'>
+    {%- for link in site.data.menu.footer.links2 -%}
+    <li class='f4 mb3'>
+      <a class='color-inherit link underline-hover'
+         href='{{ link.url }}'
+         {%- if link.rel -%} rel={{link.rel}} {%- endif -%}>{{ link.label }}</a>
+    {%- endfor -%}
+    </ul>
+</div>
+</div>
+<!-- The copyright line -->
+<div class='pa2 pl0-l
+            bg-brand-light-color brand-middark-color
+            f7'>
+  <div class='center mw7
+              flex-l justify-between'>
+  <ul class='list mv2'>
+  {%- for link in site.data.menu.footer.sosumi -%}
+  <li class='pr4 pr0-l pl4-l di'><a class='color-inherit link underline-hover' href='{{ link.url }}'>{{ link.label }}</a>
+  {%- endfor -%}
+  </ul>
+  <span class='db mv2 mr4 measure' style='order:-1;'>{{ site.data.menu.footer.copyright_statement }}</span>
   </div>
-
+</div>
 </footer>

@@ -2,6 +2,80 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import
-  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima/initialize";
+@import "tachyons-scss/tachyons";
+@import "pygments-css/manni";
+
+// Section: Brand colors
+$brand-dark-color: #B60D4E;
+$brand-middark-color: #BF3B6D;
+$brand-mid-color: #CF618B;
+$brand-light-color: #FAEFF3;
+
+.brand-dark-color              {            color: $brand-dark-color; }
+.hover-brand-dark-color:hover  {            color: $brand-dark-color }
+.bg-brand-dark-color           { background-color: $brand-dark-color; }
+.b--brand-dark-color           {     border-color: $brand-dark-color; }
+
+.brand-mid-color               {            color: $brand-mid-color; }
+.hover-brand-mid-color:hover   {            color: $brand-mid-color }
+.bg-brand-mid-color            { background-color: $brand-mid-color; }
+.b--brand-mid-color            {     border-color: $brand-mid-color; }
+
+.brand-middark-color               {            color: $brand-middark-color; }
+.hover-brand-middark-color:hover   {            color: $brand-middark-color }
+.bg-brand-middark-color            { background-color: $brand-middark-color; }
+.b--brand-middark-color            {     border-color: $brand-middark-color; }
+
+.brand-light-color             {            color: $brand-light-color; }
+.hover-brand-light-color:hover {            color: $brand-light-color }
+.bg-brand-light-color          { background-color: $brand-light-color; }
+.b--brand-light-color          {     border-color: $brand-light-color; }
+
+
+/* Specific markup for the logo */
+header .rdmr-logo, footer .rdmr-logo {
+  height: 1rem;
+  /* position: absolute; */
+  top: 0;
+  fill: #B60D4E;
+  /* calc(2.5rem / 5 * -1); */
+}
+
+/* Fonts */
+.sans-serif {
+    font-family: 'Verdana', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+.hide {
+  /* Accessibilty */
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.skip-link {
+  /* Accessibilty */
+  height: 0;
+  overflow: hidden;
+}
+
+/* Language markup for blog. */
+
+:lang(grc) {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 110%;
+}
+
+:lang(ru) {
+  font-family: 'Georgia', Times, serif;
+}
+
+// Horizontal rule
+hr {
+  width: 5em;
+  margin: $height-3 auto;
+  border: 0;
+  border-radius: $border-radius-3;
+  background-color: $brand-dark-color;
+  height: 1px;
+}

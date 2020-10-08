@@ -1,0 +1,21 @@
+links1:
+  - label: Archief
+    url: /blog/
+  - label: Projecten
+    url: /portfolio/
+  - label: 'Huidig'
+    url: /now/
+links2:
+  - label: Contact
+    url: /contact/
+  - label: 'Twitter'
+    url: https://twitter.com/redmer
+    rel: me
+
+copyright_statement: "© 2016-2020 Minimaal theme. All rights reserved."
+
+sosumi:
+  - label: Privacybeleid
+    url: /privacy/  
+  - label: Impressum
+    url: /impressum/
