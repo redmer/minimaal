@@ -79,3 +79,11 @@ hr {
   background-color: $brand-dark-color;
   height: 1px;
 }
+
+blockquote.twitter-tweet {
+  @extend .overflow-hidden ;
+  @extend .br3 ;
+  @extend .ba ;
+  @extend b--light-gray;
+  background-color: $black-20;
+}
