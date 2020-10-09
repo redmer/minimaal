@@ -21,12 +21,12 @@
 
 {% capture i18n_date %}
 {%- assign lang = p.lang | site.lang -%}
-{%- assign a = page.date | date: "%w" -%}
-{{- site.data[lang].dayoftheweek[w] -}},
-{{ page.date | date: "%-d" }}
-{% assign m = page.date | date: "%-m" | minus: 1 %}
-{{ site.data[lang].months[m] }}
-{{ page.date | date: "%Y" }}
+{%- assign a = p.date | date: "%w" | minus: 0 -%}
+{{- site.data.lang[lang].dayoftheweek[a] -}},
+{{ p.date | date: "%-d" }}
+{% assign m = p.date | date: "%-m" | minus: 1 %}
+{{ site.data.lang[lang].months[m] }}
+{{ p.date | date: "%Y" }}
 {% endcapture %}
 
 <article class='mv6
@@ -47,7 +47,7 @@
 
         </h1>
         <div class="gray f6">
-            <time datetime={{ p.date | date_to_xmlschema }}>{{ p.date | date: date_format }}</time>
+            <!--<time datetime={{ p.date | date_to_xmlschema }}>{{ p.date | date: date_format }}</time>-->
             <time datetime={{ p.date | date_to_xmlschema }}>{{ i18n_date }}</time>
             {%- if p.author -%}
                 . Door: 
