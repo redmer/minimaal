@@ -69,6 +69,8 @@
     </main>
     <footer class='mv2'>
         <!-- permalink -->
+        {% unless include.suppress_permalink %}
         <a class='gray' href='{{ p.url | relative_url }}'># Permalink</a>
+        {% endunless %}
     </footer>
 </article>
