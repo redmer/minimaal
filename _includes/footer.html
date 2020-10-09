@@ -19,12 +19,12 @@
     <p class='condensed f5 lh-title measure mr4-l'>{{ site.description }}</p>
     <!-- Two menu item lists -->
     <ul class='list lh-title ma0 mt3-l'>
-    {%- for link in site.data.menu.footer.links1 -%}
+    {%- for link in site.data.minimaal.links1 -%}
     <li class='f4 mb3'><a class='color-inherit link underline-hover' href='{{ link.url }}'>{{ link.label }}</a>
     {%- endfor -%}
     </ul>
     <ul class='list lh-title ma0 mt3-l'>
-    {%- for link in site.data.menu.footer.links2 -%}
+    {%- for link in site.data.minimaal.links2 -%}
     <li class='f4 mb3'>
       <a class='color-inherit link underline-hover'
          href='{{ link.url }}'
@@ -40,11 +40,11 @@
   <div class='center mw7
               flex-l justify-between'>
   <ul class='list mv2'>
-  {%- for link in site.data.menu.footer.sosumi -%}
+  {%- for link in site.data.minimaal.sosumi -%}
   <li class='pr4 pr0-l pl4-l di'><a class='color-inherit link underline-hover' href='{{ link.url }}'>{{ link.label }}</a>
   {%- endfor -%}
   </ul>
-  <span class='db mv2 mr4 measure' style='order:-1;'>{{ site.data.menu.footer.copyright_statement }}</span>
+  <span class='db mv2 mr4 measure' style='order:-1;'>{{ site.data.minimaal.copyright_statement }}</span>
   </div>
 </div>
 </footer>

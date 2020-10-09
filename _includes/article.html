@@ -1,5 +1,9 @@
 {%- assign p = include.post -%}
 
+{%- assign title_tag_a = false -%}
+{%- assign title_link = '' -%}
+{%- assign title_suffix = '' -%}
+
 {%- if p.link -%}
     {%- assign title_tag_a = true -%}
     {%- assign title_link = p.link -%}
@@ -44,6 +48,7 @@
         </div>
     </header>
     <main>
+        {%- if p.intro -%}<p class='measure f4'> {{ p.intro }} </p>{%- endif -%}
         <!-- contents -->
         {{ p.content }}
     </main>

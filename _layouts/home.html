@@ -14,9 +14,9 @@ layout: default
   {% assign posts = site.posts | slice: 0, 20 %}
 {% endif %}
 
-<div class='nested-list-reset'>
+<div class=''>
 {%- if posts.size > 0 -%}
-  <ul class="list">
+  <ul class="list ma0 pa0">
     {%- for p in posts -%}
     <li class=''>
       {% include article.html post=p %}
