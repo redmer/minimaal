@@ -82,21 +82,23 @@ hr {
 
 // Pretty markup: Tweets
 blockquote.twitter-tweet, div.highlight {
-  @extend .overflow-hidden ;
   @extend .br3 ;
   @extend .mv3 ;
   @extend .mh0 ;
-  @extend .ph2 ;
   @extend .pb3 ;
   @extend .bg-light-gray ;
 }
 
 blockquote.twitter-tweet {
+  @extend .overflow-hidden ;
   @extend .measure ;
+  @extend .ph2 ;
 }
 
 div.highlight {
+  @extend .overflow-scroll ;
   @extend .pt3 ;
+  @extend .ph3 ;
 }
 
 // Blog markup: tables
