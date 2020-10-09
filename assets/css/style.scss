@@ -86,5 +86,7 @@ blockquote.twitter-tweet {
   @extend .ba ;
   @extend .mv4 ; 
   @extend .mh0 ;
-  background-color: $black-20;
+  @extend .ph2 ;
+  @extend .pv3 ;
+  background-color: $brand-color-light;
 }
