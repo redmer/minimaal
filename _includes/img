@@ -1,13 +1,13 @@
-<figure class="mv4
+<figure class="mv4 mh0
                flex flex-column
                ba b--light-gray
                br3 overflow-hidden">
-  <img class='dim w-100 self-stretch replace-embed cover pointer'
+  <img class='w-100 self-stretch replace-embed cover'
          src="{{ include.url }}"
-         alt="{{ include.desc }}">
-  <figcaption class='bg-light-gray mid-gray
+         alt="{{ include.alt }}">
+  <figcaption class='bg-brand-light-color brand-middark-color
                      flex flex-row justify-between
-                     pv2'>
+                     pa2'>
     {{- include.desc -}}
   </figcaption>
 </figure>
