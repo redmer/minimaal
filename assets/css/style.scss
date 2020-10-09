@@ -81,16 +81,18 @@ hr {
 }
 
 // Pretty markup: Tweets
-blockquote.twitter-tweet {
+blockquote.twitter-tweet, pre.highlight {
   @extend .overflow-hidden ;
   @extend .br3 ;
   @extend .measure ;
   @extend .mv3 ;
   @extend .mh0 ;
   @extend .ph2 ;
-  @extend .pt3 ;
-  background-color: $brand-light-color;
+  @extend .pb3 ;
+  @extend .bg-light-gray ;
 }
+
+pre.high-lgi
 
 // Blog markup: tables
 table {
