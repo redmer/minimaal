@@ -46,16 +46,20 @@
 
         </h1>
         <div class="gray f6">
+        {% unless include.suppress_date %}
             <!--<time datetime={{ p.date | date_to_xmlschema }}>{{ p.date | date: date_format }}</time>-->
             <time datetime={{ p.date | date_to_xmlschema }}>{{- i18n_date -}}</time>
             {%- if p.author -%}
                 . Door: 
             {% endif %}
+        {%- endunless -%}
+        {%- unless include.suppress_byline -%}
         {%- for a in p.author -%}
             <span>{{ a }}</span>
             {%- unless forloop.last -%}, {% endunless %}
             {%- if forloop.last -%}. {% endif %}
         {%- endfor -%}
+        {% endunless %}
         </div>
     </header>
     <main>
