@@ -83,10 +83,10 @@ hr {
 blockquote.twitter-tweet {
   @extend .overflow-hidden ;
   @extend .br3 ;
-  @extend .ba ;
-  @extend .mv4 ; 
+  @extend .measure ;
+  @extend .mv3 ;
   @extend .mh0 ;
   @extend .ph2 ;
-  @extend .pv3 ;
+  @extend .pt3 ;
   background-color: $brand-light-color;
 }
