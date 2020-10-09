@@ -42,3 +42,25 @@ fy:
     - tongersdei
     - freed
     - sneon
+nl:
+  months:
+    - januari
+    - februari
+    - maart
+    - april
+    - mei
+    - juni
+    - juli
+    - augustus
+    - september
+    - oktober
+    - november
+    - december
+  dayoftheweek:
+    - zondag
+    - maandag
+    - dingsdag
+    - woensdag
+    - donderdag
+    - vrijdag
+    - zaterdag
