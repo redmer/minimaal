@@ -16,11 +16,11 @@ layout: default
 
 <div class=''>
 {%- if posts.size > 0 -%}
-  <ul class="list ma0 pa0">
+  <div class="">
     {%- for p in posts -%}
-    <li class=''>
+    <div class=''>
       {% include article.html post=p %}
-    </li>
+    </div>
     {%- endfor -%}
   </ul>
 
