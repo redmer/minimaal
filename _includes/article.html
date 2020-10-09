@@ -26,8 +26,7 @@
 {{ p.date | date: "%-d" }}
 {% assign m = p.date | date: "%-m" | minus: 1 %}
 {{ site.data.lang[lang].months[m] }}
-{{ p.date | date: "%Y" -}}
-{% endcapture %}
+{{ p.date | date: "%Y" -}}{% endcapture %}
 
 <article class='mv6
                 nested-links nested-copy-line-height'>
@@ -48,7 +47,7 @@
         </h1>
         <div class="gray f6">
             <!--<time datetime={{ p.date | date_to_xmlschema }}>{{ p.date | date: date_format }}</time>-->
-            <time datetime={{ p.date | date_to_xmlschema }}>{{ i18n_date }}</time>
+            <time datetime={{ p.date | date_to_xmlschema }}>{{- i18n_date -}}</time>
             {%- if p.author -%}
                 . Door: 
             {% endif %}
