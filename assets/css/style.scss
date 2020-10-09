@@ -80,6 +80,7 @@ hr {
   height: 1px;
 }
 
+// Pretty markup: Tweets
 blockquote.twitter-tweet {
   @extend .overflow-hidden ;
   @extend .br3 ;
@@ -89,4 +90,34 @@ blockquote.twitter-tweet {
   @extend .ph2 ;
   @extend .pt3 ;
   background-color: $brand-light-color;
+}
+
+// Blog markup: tables
+table {
+  @extend .relative-ns;
+  @extend .left--1-ns;
+  // display: block;
+  overflow-x: auto;
+  border-spacing: 0;
+
+  td, th {
+      @extend .ph3;
+      @extend .pv2;
+  }
+
+  th, td:first-of-type {
+      white-space: nowrap;
+  }
+
+  td {
+      vertical-align: text-top;
+  }
+  th {
+      vertical-align: bottom;
+  }
+
+  tr:nth-child(even) {
+      @extend .bg-near-white;
+      @extend .br2;
+  }
 }
