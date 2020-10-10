@@ -130,3 +130,12 @@ table {
       @extend .br2;
   }
 }
+
+// Style: blockquote
+
+blockquote {
+  @extend .f6 ;
+  line-height: 1.6 !important ;
+  margin-left: 2rem ;
+  margin-right: 0 ;
+}

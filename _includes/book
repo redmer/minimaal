@@ -1,0 +1,9 @@
+<div class='measure bg-brand-light-color'>
+<a href="{{ include.url }}">
+<h2 class='f5'>
+{{ include.title }}<br>
+{{ include.author }}
+({{ include.year }}).
+</h2>
+</a>
+</div>
