@@ -138,3 +138,22 @@ blockquote {
   margin-left: 2rem ;
   margin-right: 0 ;
 }
+
+// Filling a lacune with rem-based widths
+.width-8 { width: 8rem; }
+.width-10 { width: 10rem; }
+
+@media #{$breakpoint-not-small} {
+  .width-8-ns { width: 8rem; }
+  .width-10-ns { width: 10rem; }
+}
+
+@media #{$breakpoint-medium} {
+  .width-8-m { width: 8rem; }
+  .width-10-m { width: 10rem; }
+}
+
+@media #{$breakpoint-large} {
+  .width-8-l { width: 8rem; }
+  .width-10-l { width: 10rem; }
+}
