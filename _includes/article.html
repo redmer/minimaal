@@ -20,7 +20,7 @@
 {%- assign date_format = site.minimaal.date_format | default: "%A, %d %B %Y" -%}
 
 {% capture i18n_date %}
-{%- assign lang = p.lang | site.lang -%}
+{%- assign lang = p.lang | default: site.lang -%}
 {%- assign a = p.date | date: "%w" | minus: 0 -%}
 {{- site.data.lang[lang].dayoftheweek[a] -}},
 {{ p.date | date: "%-d" }}
