@@ -1,9 +1,21 @@
-<div class='measure bg-brand-light-color'>
-<a href="{{ include.url }}">
-<h2 class='f5'>
-{{ include.title }}<br>
-{{ include.author }}
-({{ include.year }}).
-</h2>
+<div class='db black ma2'
+     style='width:10rem'>
+<a class='link dim'
+    href="{{ include.data.affiliate_link }}"
+   target="_blank" rel="noopener noreferrer"
+    title='Bol.com-link naar {{ include.data.title }} van {{ include.data.author_publisher }}.'>
+<div class='aspect-ratio aspect-ratio--4x6'>
+<div class='aspect-ratio--object cover bg-center' style='background:url({{ include.data.img }}) center;'></div>
+</div>
+<dl class="mt2 f6 lh-copy">
+  <dt class="clip">Titel</dt>
+  <dd class="ml0 fw9">{{ include.data.title }}</dd>
+  <dt class="clip">Ondertitel</dt>
+  <dd class="ml0 black-60">{{ include.data.subtitle }}</dd>
+  <dt class="clip">Auteur</dt>
+  <dd class="ml0 mt2 black-60">{{ include.data.author_publisher }}</dd>
+  <dt class="clip">Opmerking</dt>
+  <dd class="ml0 mt2 black-60">{{ include.data.comment }}</dd>
+</dl>
 </a>
 </div>

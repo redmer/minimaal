@@ -49,6 +49,7 @@
         {% unless include.suppress_date %}
             <!--<time datetime={{ p.date | date_to_xmlschema }}>{{ p.date | date: date_format }}</time>-->
             <time datetime={{ p.date | date_to_xmlschema }}>{{- i18n_date -}}</time>
+            {%- if p.lastupdate -%}<time datetime={{ p.lastupdate | date_to_xmlschema }}>. Update: {{- p.lastupdate -}}.</time>{%- endif -%}
             {%- if p.author -%}
                 . Door: 
             {% endif %}
@@ -62,11 +63,11 @@
         {% endunless %}
         </div>
     </header>
-    <main>
+    <div class=''>
         {%- if p.intro -%}<p class='measure f4'> {{ p.intro }} </p>{%- endif -%}
         <!-- contents -->
         {{ p.content }}
-    </main>
+    </div>
     <footer class='mv2'>
         <!-- permalink -->
         {% unless include.suppress_permalink %}
