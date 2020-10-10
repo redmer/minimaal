@@ -1,4 +1,4 @@
-<div class='db black ma2 width-10-ns width-8'>
+<div class='db black ma2 width-10-l width-8'>
 <a class='link dim'
     href="{{ include.data.affiliate_link }}"
    target="_blank" rel="noopener noreferrer"
