@@ -8,7 +8,9 @@
     <meta name="robots" content="noindex, follow">
   {% endif %}
 
+  {% unless site.minimaal.disable_seo %}
   {%- seo -%}
+  {% endunless %}
   <meta name="twitter:dnt" content="on">
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css?cache={{ site.time | date: '%s' }}">
   {%- feed_meta -%}
