@@ -29,7 +29,8 @@
 {{ p.date | date: "%Y" -}}{% endcapture %}
 
 <article class='mv6
-                nested-links nested-copy-line-height'>
+                {% if site.minimaal.nested_links %} nested-links {% endif %}
+                nested-copy-line-height'>
     <!-- heading -->
     <header>
         <h1 class='f4 brand-dark-color lh-title'>
