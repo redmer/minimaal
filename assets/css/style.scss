@@ -31,6 +31,14 @@ $brand-light-color: #FAEFF3;
 .bg-brand-light-color          { background-color: $brand-light-color; }
 .b--brand-light-color          {     border-color: $brand-light-color; }
 
+.target-brand-dark-color:target { background-color: $brand-dark-color; }
+.target-brand-mid-color:target { background-color: $brand-mid-color; }
+.target-brand-middark-color:target { background-color: $brand-middark-color; }
+.target-brand-light-color:target { background-color: $brand-light-color; }
+
+
+
+
 
 /* Specific markup for the logo */
 header .rdmr-logo, footer .rdmr-logo {
