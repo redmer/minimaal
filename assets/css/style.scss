@@ -4,7 +4,7 @@
 
 @import "tachyons-scss/tachyons";
 @import "pygments-css/manni";
-@import "brand-color.scss";
+@import "./brand-color.scss";
 
 .brand-dark-color              {            color: $brand-dark-color; }
 .hover-brand-dark-color:hover  {            color: $brand-dark-color }
