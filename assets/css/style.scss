@@ -4,31 +4,30 @@
 
 @import "tachyons-scss/tachyons";
 @import "pygments-css/manni";
-
-// Section: Brand colors
-$brand-dark-color: #B60D4E;
-$brand-middark-color: #BF3B6D;
-$brand-mid-color: #CF618B;
-$brand-light-color: #FAEFF3;
+@import "brand-color.scss";
 
 .brand-dark-color              {            color: $brand-dark-color; }
 .hover-brand-dark-color:hover  {            color: $brand-dark-color }
 .bg-brand-dark-color           { background-color: $brand-dark-color; }
+.hover-bg-brand-dark-color:hover{ background-color: $brand-dark-color; }
 .b--brand-dark-color           {     border-color: $brand-dark-color; }
 
 .brand-mid-color               {            color: $brand-mid-color; }
 .hover-brand-mid-color:hover   {            color: $brand-mid-color }
 .bg-brand-mid-color            { background-color: $brand-mid-color; }
+.hover-bg-brand-mid-color:hover{ background-color: $brand-mid-color; }
 .b--brand-mid-color            {     border-color: $brand-mid-color; }
 
 .brand-middark-color               {            color: $brand-middark-color; }
 .hover-brand-middark-color:hover   {            color: $brand-middark-color }
 .bg-brand-middark-color            { background-color: $brand-middark-color; }
+.hover-bg-brand-middark-color:hover{ background-color: $brand-middark-color; }
 .b--brand-middark-color            {     border-color: $brand-middark-color; }
 
 .brand-light-color             {            color: $brand-light-color; }
 .hover-brand-light-color:hover {            color: $brand-light-color }
 .bg-brand-light-color          { background-color: $brand-light-color; }
+.hover-bg-brand-light-color:hover{ background-color: $brand-light-color; }
 .b--brand-light-color          {     border-color: $brand-light-color; }
 
 .target-brand-dark-color:target { background-color: $brand-dark-color; }
@@ -38,7 +37,7 @@ $brand-light-color: #FAEFF3;
 
 
 
-
+  
 
 /* Specific markup for the logo */
 header .rdmr-logo, footer .rdmr-logo {
