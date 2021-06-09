@@ -67,7 +67,11 @@
     <div class=''>
         {%- if p.intro -%}<p class='measure f4'> {{ p.intro }} </p>{%- endif -%}
         <!-- contents -->
-        {{ content }}
+        {%- if site.minimaal.homepage_fulltext -%}
+            {{ p.content }}
+        {%- else -%}
+            {{ content }}
+        {%- endif -%}
     </div>
     <footer class='mv2'>
         <!-- permalink -->
