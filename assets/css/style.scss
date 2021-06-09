@@ -47,7 +47,7 @@ header .rdmr-logo, footer .rdmr-logo {
 }
 
 .hide {
-  /* Accessibilty */
+  /* Accessibility */
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
@@ -57,6 +57,10 @@ header .rdmr-logo, footer .rdmr-logo {
   /* Accessibilty */
   height: 0;
   overflow: hidden;
+}
+
+pre {
+  font-size: 0.9rem;
 }
 
 /* Language markup for blog. */
